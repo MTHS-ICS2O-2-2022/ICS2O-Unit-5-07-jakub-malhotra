@@ -6,16 +6,13 @@
 
 "use strict"
 
-function myButtonClicked() {
-  let text = ""
-  let counter = 0
-  const multiplier = parseInt(document.getElementById("multiplier").value)
-  const multiplicand = parseInt(document.getElementById("multiplicand").value)
+function calculate() {
+  const integer = parseFloat(document.getElementById("highestInteger").value)
+  let output = 0
 
-
-  while (counter <= multiplier) {
-    text = text + multiplicand + " x " + counter + " = " + counter * multiplicand + "<br>"
-    counter = counter + 1
+  for (let counter = 1; counter <= integer; counter++) {
+    output += counter
   }
-  document.getElementById("answer").innerHTML = text
+
+  document.getElementById("output").innerHTML = "The sum is: " + output
 }
